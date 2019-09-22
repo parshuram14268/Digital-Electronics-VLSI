@@ -1,0 +1,12 @@
+module D_latch(Q, Qn, c, D);
+output Q;
+output Qn;
+input c;
+input D;
+wire Dn,D1,Dn1;
+not(Dn, D);
+nand(D1, c, D);
+nand(Dn1, c, Dn);
+nand(Q, D1, Qn);
+nand(Qn, Dn1, Q);
+endmodule

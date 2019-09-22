@@ -1,0 +1,10 @@
+module Full_adder_verilog(x,y,Cin,carry,sum);
+input x,y,Cin;
+output sum,carry;
+wire w1,w2,w3;
+xor(sum,x,y,Cin);
+and a1 (w1,x,y);
+and a2 (w2,x,Cin);
+and a3 (w3,y,Cin);
+or o1 (carry,w1,w2,w3);
+endmodule

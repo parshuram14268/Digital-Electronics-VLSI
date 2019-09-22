@@ -1,0 +1,6 @@
+module SR_latch(s,r,q,q1);
+input s,r;
+output q,q1;
+nand(q,s,q1);
+nand(q1,r,q);
+endmodule

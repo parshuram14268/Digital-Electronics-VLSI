@@ -1,0 +1,9 @@
+module four_to_two_priority_encoder_verilog(a,b,c,d,x,y,v);
+input a,b,c,d;
+output x,y,v;
+wire w1;
+and a1 (w1,b,~c);
+or(x,d,w1);
+or(y,d,c);
+or(v,a,b,c,d);
+endmodule

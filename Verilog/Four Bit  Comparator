@@ -1,0 +1,8 @@
+module four_bit_comparator(a,b,x,y,z);
+input [3:0]a;
+input [3:0]b;
+output x,y,z;
+assign x=(a<b);
+assign y=(a>b);
+assign z=(a==b);
+endmodule

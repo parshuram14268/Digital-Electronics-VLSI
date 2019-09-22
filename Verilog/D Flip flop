@@ -1,0 +1,18 @@
+module D_flipflop(clk,d,rst,q,qb);
+input clk,d,rst;
+output q,qb;
+reg q,qb;
+always@(posedge clk | rst)
+begin
+ if(rst==0)
+ begin
+ q <= d;
+qb <= ~d;
+ end
+else
+ begin
+ q <= 0;
+ qb <= 1;
+end
+end
+endmodule
